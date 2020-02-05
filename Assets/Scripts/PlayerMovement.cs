@@ -16,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(Input.mousePosition);
         Vector3 mousePos = Camera.main.ScreenToWorldPoint( Input.mousePosition);
 
-        transform.position = new Vector3(mousePos.x,mousePos.y, transform.position.z)
+        transform.position = new Vector3(mousePos.x,mousePos.y, transform.position.z);
     }
 }
