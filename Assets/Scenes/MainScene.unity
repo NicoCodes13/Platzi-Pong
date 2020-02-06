@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 1401568764}
   - component: {fileID: 1401568766}
   - component: {fileID: 1401568767}
+  - component: {fileID: 1401568768}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -547,8 +548,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.48596781
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -571,6 +572,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddle: {fileID: 573803792}
   rbBall: {fileID: 1401568766}
+--- !u!58 &1401568768
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401568763}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.008925796}
+  serializedVersion: 2
+  m_Radius: 0.3933044
 --- !u!1 &1407065547
 GameObject:
   m_ObjectHideFlags: 0
