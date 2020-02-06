@@ -17,13 +17,12 @@ public class BallBehaviour : MonoBehaviour {
         if (!gameStarted) {
 
             float posDif = paddle.position.x - transform.position.x;
-            transform.position = new Vector3 (paddle.position.x - posDif, paddle.position.y, paddle.position.z);
+            transform.position = new Vector2 (paddle.position.x - posDif, paddle.position.y);
             if(Input.GetMouseButtonDown(0))
             {
                 rbBall.velocity = new Vector2(10,10);
                 gameStarted = true;
             }
         }
-
     }
 }
