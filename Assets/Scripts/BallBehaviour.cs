@@ -8,8 +8,9 @@ public class BallBehaviour : MonoBehaviour
     public bool gameStarted = false;
 
     public Rigidbody2D rbBall;
-
     float posDif;
+
+    public AudioSource ballAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +25,16 @@ public class BallBehaviour : MonoBehaviour
             transform.position = new Vector2(paddle.position.x - posDif, paddle.position.y);
             if (Input.GetMouseButtonDown(0))
             {
-                
+
                 rbBall.velocity = new Vector2(8, 8);
                 gameStarted = true;
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        ballAudio.Play();
+    }
+    
 }

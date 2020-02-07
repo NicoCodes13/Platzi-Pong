@@ -15,6 +15,8 @@ public class DeadZone : MonoBehaviour
 
     public SceneChanger sceneChanger;
 
+    public AudioSource pointSound;
+
     private void OnTriggerEnter2D(Collider2D ball)
     {
         if (gameObject.tag == "Izquierdo")
@@ -30,6 +32,7 @@ public class DeadZone : MonoBehaviour
 
         ball.GetComponent<BallBehaviour>().gameStarted = false;
         CheckScore();
+        pointSound.Play();
     }
 
     void CheckScore()
