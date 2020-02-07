@@ -13,17 +13,34 @@ public class DeadZone : MonoBehaviour
     int scorePlayerQuantity;
     int scoreEnemyQuantity;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public SceneChanger sceneChanger;
+
+    private void OnTriggerEnter2D(Collider2D ball)
     {
         if (gameObject.tag == "Izquierdo")
         {
             scoreEnemyQuantity++;
-            updateScoreLabel(scoreEnemyText,scoreEnemyQuantity);
+            updateScoreLabel(scoreEnemyText, scoreEnemyQuantity);
         }
         else if (gameObject.CompareTag("Derecho"))
         {
             scorePlayerQuantity++;
-            updateScoreLabel(scorePlayerText,scorePlayerQuantity);
+            updateScoreLabel(scorePlayerText, scorePlayerQuantity);
+        }
+
+        ball.GetComponent<BallBehaviour>().gameStarted = false;
+        CheckScore();
+    }
+
+    void CheckScore()
+    {
+        if(scorePlayerQuantity >= 3 )
+        {
+            sceneChanger.ChangeSceneTo("WinScene");
+        }
+        else if(scoreEnemyQuantity >=3 )
+        {
+            sceneChanger.ChangeSceneTo("LoseScene");
         }
     }
 

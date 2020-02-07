@@ -664,6 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePlayerText: {fileID: 1955010476}
   scoreEnemyText: {fileID: 1923736538}
+  sceneChanger: {fileID: 1745860785}
 --- !u!1 &1401568763
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePlayerText: {fileID: 1955010476}
   scoreEnemyText: {fileID: 1923736538}
+  sceneChanger: {fileID: 1745860785}
 --- !u!61 &1528833708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -926,6 +928,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2117715, y: 10.15959}
   m_EdgeRadius: 0
+--- !u!1 &1745860784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745860786}
+  - component: {fileID: 1745860785}
+  m_Layer: 0
+  m_Name: SceneChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1745860785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745860784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98b31f6ed815974c8ce1ab27be557a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1745860786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745860784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34170264, y: -0.29413685, z: 122.42422}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923736536
 GameObject:
   m_ObjectHideFlags: 0
