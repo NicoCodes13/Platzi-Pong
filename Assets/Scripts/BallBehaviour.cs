@@ -24,6 +24,7 @@ public class BallBehaviour : MonoBehaviour
             transform.position = new Vector2(paddle.position.x - posDif, paddle.position.y);
             if (Input.GetMouseButtonDown(0))
             {
+                
                 rbBall.velocity = new Vector2(8, 8);
                 gameStarted = true;
             }
