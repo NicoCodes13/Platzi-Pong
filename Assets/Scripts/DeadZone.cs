@@ -2,15 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DeadZone : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("Colision carnal");
-    }
+
+    public Text scorePlayerText;
+    public Text scoreEnemyText;
+
+    int scorePlayerQuantity;
+    int scoreEnemyQuantity;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Deteccion carnal");
+        if (gameObject.tag == "Izquierdo")
+        {
+            scoreEnemyQuantity++;
+            updateScoreLabel(scoreEnemyText,scoreEnemyQuantity);
+        }
+        else if (gameObject.CompareTag("Derecho"))
+        {
+            scorePlayerQuantity++;
+            updateScoreLabel(scorePlayerText,scorePlayerQuantity);
+        }
+    }
+
+    void updateScoreLabel(Text label, int score)
+    {
+        label.text = score.ToString();
     }
 }
